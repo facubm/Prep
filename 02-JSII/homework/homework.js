@@ -4,6 +4,8 @@ function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
 
+  return array.pop();
+
 }
 
 function incrementarPorUno(array) {
@@ -11,6 +13,10 @@ function incrementarPorUno(array) {
   // Aumenta cada número por 1 y devuelve el array
   // Tu código:
 
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i] + 1;
+  }
+  return array;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -18,6 +24,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
 
+  array.push(elemento);
+  return array;
 }
 
 function dePalabrasAFrase(palabras) {
@@ -26,13 +34,27 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  
+  let frase = palabras[0];
 
+  for (let i = 1; i < palabras.length; i++) {
+    frase = frase + " " + palabras[i];
+  }
+  return frase;
 }
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === elemento) {
+      return true;
+    } else {
+      return false;
+    }    
+  }
 
 }
 
